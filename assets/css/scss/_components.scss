@@ -1,1 +1,66 @@
 // todo código reutilizável: botões, navbars, cards e assim por diante
+
+.hero {
+  background-color: $color-black-russian;
+  color: $color-white;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 20px 8%;
+
+  &__menu-img,
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__menu-img {
+    width: 25px;
+    margin-right: 20px;
+  }
+
+  &__logo {
+    width: 160px;
+  }
+
+  &__menu {
+    flex: 1; // flex-grow: 1, flex-shrink: 1, flex-basis: 0.
+    text-align: right;
+
+    li {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0 20px;
+
+      a {
+        text-decoration: none;
+        color: $color-white;
+      }
+    }
+  }
+
+  button {
+    background-color: $color-white-smoke;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: 0;
+
+    height: 30px;
+    width: 60px;
+
+    span {
+      background-color: $color-nobel;
+      border-radius: 50%;
+      display: block;
+
+      width: 26px;
+      height: 26px;
+      margin-left: 2px;
+    }
+  }
+}
