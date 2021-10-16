@@ -64,3 +64,24 @@
     }
   }
 }
+
+.lamp-container {
+  position: absolute;
+  width: 200px;
+  top: -20px;
+  left: 22%;
+
+  &__lamp {
+    width: 100%;
+  }
+
+  &__light {
+    margin-left: -10px;
+    transform: translateX(-50%);
+
+    position: absolute;
+    width: 700px;
+    top: 97%;
+    left: 50%;
+  }
+}
