@@ -42,27 +42,6 @@
       }
     }
   }
-
-  button {
-    background-color: $color-white-smoke;
-    border: 0;
-    border-radius: 20px;
-    cursor: pointer;
-    outline: 0;
-
-    height: 30px;
-    width: 60px;
-
-    span {
-      background-color: $color-nobel;
-      border-radius: 50%;
-      display: block;
-
-      width: 26px;
-      height: 26px;
-      margin-left: 2px;
-    }
-  }
 }
 
 .lamp-container {
@@ -78,11 +57,47 @@
   &__light {
     margin-left: -10px;
     transform: translateX(-50%);
+    transition: opacity 0.5s;
 
     position: absolute;
     width: 700px;
     top: 97%;
     left: 50%;
+  }
+
+  &__light-state-off {
+    opacity: 0;
+  }
+
+  &__switch {
+    background-color: $color-white-smoke;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    outline: 0;
+
+    height: 30px;
+    width: 60px;
+
+    span {
+      background-color: $color-nobel;
+      border-radius: 50%;
+      display: block;
+      margin-left: 2px;
+      transition: background-color 0.5s, margin-left 0.5s;
+
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  &__switch-active {
+    background-color: $color-free-speech-aquamarine;
+    span {
+      background-color: $color-white;
+      margin-left: 31px;
+    }
   }
 }
 
